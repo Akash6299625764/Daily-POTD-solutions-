@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+  int total = 0;
+  int count = 0;
+  int n;
+  int minutes;
+  cin >> n;
+  cin >> minutes;
+  int dif = 240 - minutes;
+  for (int i = 1; i <= n; i++)
+  {
+    total = total + (5 * i);
+    if (total <= dif)
+      count++;
+    else
+      break;
+  }
+  cout << count;
+  return 0;
+}
